@@ -19,6 +19,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-6I-NhH" customClass="DLHorizontalScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="I0X-CW-tEf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -26,7 +29,6 @@
                             <constraint firstItem="fxL-6I-NhH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="38J-dz-Fvc"/>
                             <constraint firstItem="fxL-6I-NhH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="4Rw-YQ-ppw"/>
                             <constraint firstAttribute="trailing" secondItem="fxL-6I-NhH" secondAttribute="trailing" id="CpG-jW-aHR"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fxL-6I-NhH" secondAttribute="bottom" constant="450" id="NZd-7F-YBd"/>
                         </constraints>
                     </view>
                     <connections>
