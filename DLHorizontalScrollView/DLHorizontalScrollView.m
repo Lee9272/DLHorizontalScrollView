@@ -65,7 +65,7 @@
     UIImageView *previousView = [UIImageView new];
     for (int i = 0; i < itemCount; i++) {
         UIImageView *currentView = [UIImageView new];
-        
+        currentView.backgroundColor = [self randomColor];
         currentView.image = [self.items[i] isKindOfClass:[UIImage class]] ? self.items[i] : nil;
         currentView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.scrollView addSubview:currentView];
@@ -86,6 +86,18 @@
     
     // the last one should pin to the trailing of superview
     [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:previousView attribute:NSLayoutAttributeTrailing relatedBy:0 toItem:self.scrollView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
+}
+
+- (UIColor *)randomColor
+{
+    switch (arc4random()%5) {
+        case 0: return [UIColor greenColor];
+        case 1: return [UIColor blueColor];
+        case 2: return [UIColor orangeColor];
+        case 3: return [UIColor redColor];
+        case 4: return [UIColor purpleColor];
+        default: return [UIColor blackColor];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
